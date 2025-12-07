@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calc{
+            display: grid;
+            grid-template-columns: repeat(4,100px);
+            grid-template-rows: repeat(5,100px);
+        }
+        input{
+            grid-column: span 4;
+            font-size: 50px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calc">
+        <input type="text" name="" placeholder="0" id="">
+        <button onclick="showNum();">7</button>
+        <button onclick="showNum();">8</button>
+        <button onclick="showNum();">9</button>
+        <button onclick="showOpr()">+</button>
+
+        <button onclick="showNum();">4</button>
+        <button onclick="showNum();">5</button>
+        <button onclick="showNum();">6</button>
+        <button onclick="showOpr()">-</button>
+
+        <button onclick="showNum();">1</button>
+        <button onclick="showNum();">2</button>
+        <button onclick="showNum();">3</button>
+        <button onclick="showOpr()">*</button>
+
+        <button onclick="cl()">C</button>
+        <button onclick="showNum();">0</button>
+        <button onclick="res();">=</button>
+        <button onclick="showOpr()">/</button>
+    </div>
+
+    <script>
+        result = ""
+        input = document.querySelector("input");
+        function showNum(){
+            // jis button p click kiya h
+                result += event.target.innerHTML;
+                input.value = result;
+        }
+        function showOpr(){
+            // jis button p click kiya h
+                result += event.target.innerHTML;
+                input.value = result;
+        }
+        function res(){
+            result = eval(result);
+            input.value = result;
+
+
+        }
+
+        function cl(){
+            result = "";
+            input.value = result;
+
+        }
+    </script>
+</body>
+
+</html>
