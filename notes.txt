@@ -1,0 +1,12 @@
+JavaScript - it is a programming language - it provides functionality to our website.
+
+Data Types:
+number - int,float(decimal)
+boolean - True/False
+String - “”
+
+
+x,y,z,result -variables
+variable is a container in which we store value
+
+        num2 = document.querySelector("#num2");
