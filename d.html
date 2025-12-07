@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+        Number1 <input type="text" name="" id="num1">
+        Number2 <input type="text" name="" id="num2">
+        <button onclick="largest()">FIND LARGEST</button>
+        Result <input type="text" name="" id="result">
+
+    <script>
+        // parseInt - string to int
+        // parseFloat - string to decimal number
+        num1 = document.querySelector("#num1");
+        num2 = document.querySelector("#num2");
+        res = document.querySelector("#result");
+
+        function largest(){
+            // result.value = +parseInt(num2.value);
+            value1 = parseInt(num1.value)
+            value2 = parseInt(num2.value)
+
+            if (value1>value2){
+                res.value = value1;
+            }
+            else{
+                res.value = value2;
+
+            }
+
+        }
+
+    </script>
+</body>
+</html>

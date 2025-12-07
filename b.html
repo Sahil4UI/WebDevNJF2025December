@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DOM  - document object model -->
+     <input class="box" type="text">
+     <!-- on click pe kch show krna hai -->
+     <button onclick="show()">Click Me</button>
+     <h1 id="heading"></h1>
+
+     <script>
+        // kya show krna hai 
+        input = document.querySelector(".box");
+        h1 = document.querySelector("#heading");
+        function show(){
+            // h1 k inside jao and input tag ki value store krdo
+            h1.innerHTML=input.value;
+        }
+     </script>
+</body>
+</html>
