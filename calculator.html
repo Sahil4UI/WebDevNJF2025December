@@ -45,16 +45,26 @@
 
     <script>
         result = ""
+        isOpr  = false;
         input = document.querySelector("input");
         function showNum(){
             // jis button p click kiya h
                 result += event.target.innerHTML;
                 input.value = result;
+                isOpr=false;
         }
         function showOpr(){
             // jis button p click kiya h
-                result += event.target.innerHTML;
+            if (isOpr==true){
+                    result = result.slice(0,result.length-1)+event.target.innerHTML;
+
+            }
+            else{
+                    result += event.target.innerHTML;
+            }
+                
                 input.value = result;
+                isOpr = true;
         }
         function res(){
             result = eval(result);
