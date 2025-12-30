@@ -19,6 +19,10 @@ for (let i=0;i<songs.length;i++)
     img.src = songs[i].songPoster;
     img.className="w-100"
 
+    let audio = document.createElement("audio");
+    audio.src = songs[i].songUrl;
+
+
     let h2 =  document.createElement("h2");
     h2.innerText = songs[i].songName;
 
@@ -26,13 +30,38 @@ for (let i=0;i<songs.length;i++)
     btn.className = "btn btn-info";
     btn.innerText = "PLAY";
 
+
+    btn.addEventListener("click",
+        function(){
+            audioList = document.querySelectorAll("audio")
+            audioList[i].play();
+            for (let j=0;j<audioList.length;j++)
+            {
+                if (j!=i)
+                {
+                    audioList[j].pause();
+                }
+            }
+        }
+    )
+
+
+
     card.appendChild(img);
     card.appendChild(h2);
     card.appendChild(btn);
-
+    card.appendChild(audio);
     div.appendChild(card);
+
     row.appendChild(div);
 }
 
 container.appendChild(row);
 songsDiv.appendChild(container);
+
+
+document.querySelector(".play-btn").addEventListener(
+    "click",
+    function (){
+    }
+)
